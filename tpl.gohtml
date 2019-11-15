@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./static/jquery-2.2.0.min.js"></script>
+    <script src="./static/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./static/semantic.min.css" />
+    <title>Hello World!</title>
+
+</head>
+<body>
+<h1>Quotes Of The Day</h1>
+
+<div class="ui inverted segment">
+    <div class="ui inverted relaxed divided list">
+        {{range $index, $element := .}}
+            {{range $i, $e := $element}}
+                <div class="item">
+                    <div class="content">
+                        <div class="header">{{$i}}</div>
+                        {{$e}}
+                    </div>
+                </div>
+            {{end}}
+        {{end}}
+    </div>
+</div>
+</body>
+</html>
