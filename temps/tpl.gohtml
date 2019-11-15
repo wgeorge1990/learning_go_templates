@@ -11,15 +11,26 @@
 
 </head>
 <body>
+<script>
+    console.log("on content load")
+    function removeFromBucket(index) {
+        console.log("removeFromBucket index:", index)
+        let listItem = document.getElementById(`item${index}`)
+        console.log(listItem)
+        listItem.parentNode.removeChild(listItem)
+    }
+</script>
 {{template "headerComponent"}}
 <div class="ui inverted segment">
     <div class="ui inverted relaxed divided list">
         {{range $index, $element := .}}
             {{range $i, $e := $element}}
-                <div class="item">
-                    <div class="content">
-                        <div class="header">{{$i}}</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item{{$i}}>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket({{$i}})">Remove from Bucket
+                            </button>
                         {{$e}}
                     </div>
                 </div>

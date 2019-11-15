@@ -11,6 +11,15 @@
 
 </head>
 <body>
+<script>
+    console.log("on content load")
+    function removeFromBucket(index) {
+        console.log("removeFromBucket index:", index)
+        let listItem = document.getElementById(`item${index}`)
+        console.log(listItem)
+        listItem.parentNode.removeChild(listItem)
+    }
+</script>
 
     <h2 class="ui center aligned icon header">
         <i class="circular eraser icon"></i>
@@ -21,82 +30,102 @@
     <div class="ui inverted relaxed divided list">
         
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">0</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item0>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(0)">Remove from Bucket
+                            </button>
                         Go sky diving
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">1</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item1>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(1)">Remove from Bucket
+                            </button>
                         Dont worry be happy
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">2</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item2>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(2)">Remove from Bucket
+                            </button>
                         Go deep sea diving
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">3</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item3>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(3)">Remove from Bucket
+                            </button>
                         Go to Santorini
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">4</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item4>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(4)">Remove from Bucket
+                            </button>
                         Bleach my hair
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">5</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item5>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(5)">Remove from Bucket
+                            </button>
                         But a racecar
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">6</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item6>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(6)">Remove from Bucket
+                            </button>
                         Travel to the Neatherlands
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">7</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item7>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(7)">Remove from Bucket
+                            </button>
                         Thru hike the Appilachian trail
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">8</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item8>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(8)">Remove from Bucket
+                            </button>
                         Go on a safari
                     </div>
                 </div>
             
-                <div class="item">
-                    <div class="content">
-                        <div class="header">9</div>
-                        <button class="positive ui right floated button">Remove from Bucket</button>
+                <div class="item" id=item9>
+                    <div class="content" style="font-size: 2em">
+                            <button
+                               class="positive ui right floated button"
+                               onclick="removeFromBucket(9)">Remove from Bucket
+                            </button>
                         Learn  to fly a plane
                     </div>
                 </div>
