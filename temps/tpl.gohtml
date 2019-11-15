@@ -11,8 +11,7 @@
 
 </head>
 <body>
-<h1>Random list of stuff</h1>
-
+{{template "headerComponent"}}
 <div class="ui inverted segment">
     <div class="ui inverted relaxed divided list">
         {{range $index, $element := .}}
@@ -20,6 +19,7 @@
                 <div class="item">
                     <div class="content">
                         <div class="header">{{$i}}</div>
+                        <button class="positive ui right floated button">Remove from Bucket</button>
                         {{$e}}
                     </div>
                 </div>

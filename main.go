@@ -9,30 +9,27 @@ import (
 
 func main() {
 	//tpl returns pointer to a template if no err
-	tpl, err := template.ParseFiles("temps/tpl.gohtml", "temps/footnote.gohtml")
+	tpl, err := template.ParseFiles("temps/tpl.gohtml", "temps/footnote.gohtml", "temps/header.gohtml")
 	//tpl, err := template.ParseGlob("temps/*.gohtml")
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	quotes := []string{
-		"To be or not to be",
+	todos := []string{
+		"Go sky diving",
 		"Dont worry be happy",
-		"Tomatoes Potatoes",
-		"build me a bridge and then cross it",
+		"Go deep sea diving",
+		"Go to Santorini",
+		"Bleach my hair",
+		"But a racecar",
+		"Travel to the Neatherlands",
+		"Thru hike the Appilachian trail",
+		"Go on a safari",
+		"Learn  to fly a plane",
+
 	}
 
-	weekDays := map[int]string{
-		1: "Monday",
-		2: "Tuesday",
-		3: "Wednesday",
-		4: "Thursday",
-		5: "Friday",
-		6: "Saturday",
-		7: "Sunday",
-	}
-
-	container := []interface{}{weekDays, quotes}
+	container := []interface{}{ todos}
 	fmt.Println(container)
 	//which then's gives us the ability to call Execute!!
 	nf, err := os.Create("index.html")
