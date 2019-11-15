@@ -9,7 +9,8 @@ import (
 
 func main() {
 	//tpl returns pointer to a template if no err
-	tpl, err := template.ParseFiles("tpl.gohtml")
+	tpl, err := template.ParseFiles("temps/tpl.gohtml", "temps/footnote.gohtml")
+	//tpl, err := template.ParseGlob("temps/*.gohtml")
 	if err != nil {
 		log.Fatalln(err)
 	}
