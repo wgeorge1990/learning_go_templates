@@ -7,9 +7,13 @@ import (
 	"text/template"
 )
 
+
+
 func main() {
 	//tpl returns pointer to a template if no err
 	tpl, err := template.ParseFiles("temps/tpl.gohtml", "temps/footnote.gohtml", "temps/header.gohtml")
+	//tpl := template.Must(template.New("new").Funcs(fm).ParseFiles("temps/tpl.gohtml", "temps/footnote.gohtml", "temps/header.gohtml"))
+	//tpl, err := template.ParseFiles("temps/tpl.gohtml", "temps/footnote.gohtml", "temps/header.gohtml")
 	//tpl, err := template.ParseGlob("temps/*.gohtml")
 	if err != nil {
 		log.Fatalln(err)
@@ -21,9 +25,9 @@ func main() {
 		"Go deep sea diving",
 		"Go to Santorini",
 		"Bleach my hair",
-		"But a racecar",
-		"Travel to the Neatherlands",
-		"Thru hike the Appilachian trail",
+		"Buy a race car",
+		"Travel to the Netherlands",
+		"Thru hike the Appalachian trail",
 		"Go on a safari",
 		"Learn  to fly a plane",
 

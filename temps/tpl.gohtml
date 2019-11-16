@@ -21,6 +21,11 @@
     }
 </script>
 {{template "headerComponent"}}
+<div class="ui container">
+    <div class="ui fluid action input">
+        <input type="text" placeholder="Search...">
+        <div class="ui button">Search</div>
+    </div>
 <div class="ui inverted segment">
     <div class="ui inverted relaxed divided list">
         {{range $index, $element := .}}
@@ -38,6 +43,8 @@
         {{end}}
     </div>
 </div>
-{{template "footnoteComponent"}}
+    {{template "footnoteComponent"}}
+</div>
+
 </body>
 </html>
