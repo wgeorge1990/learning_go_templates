@@ -28,8 +28,7 @@
     </div>
 <div class="ui inverted segment">
     <div class="ui inverted relaxed divided list">
-        {{range $index, $element := .}}
-            {{range $i, $e := $element}}
+            {{range $i, $e := .Todos}}
                 <div class="item" id=item{{$i}}>
                     <div class="content" style="font-size: 2em">
                             <button
@@ -40,10 +39,10 @@
                     </div>
                 </div>
             {{end}}
-        {{end}}
+
     </div>
 </div>
-    {{template "footnoteComponent"}}
+    {{template "footnoteComponent" .MetaData}}
 </div>
 
 </body>

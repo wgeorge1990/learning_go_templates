@@ -52,7 +52,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	container := []interface{}{ todos}
+	//container := []interface{}{ todos}
 	//which then's gives us the ability to call Execute!!
 	nf, err := os.Create("index.html")
 	if err != nil {
@@ -61,7 +61,7 @@ func main() {
 	defer nf.Close()
 	//Instead of execute use executeTemplates and pass temp names for
 	//specificity's sake. and then instead of parseFiles use parseTemplates
-	err = tpl.Execute(nf, container)
+	err = tpl.Execute(nf, appData)
 	if err != nil {
 		log.Fatalln(err)
 	}
