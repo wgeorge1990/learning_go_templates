@@ -19,12 +19,16 @@
         console.log(listItem)
         listItem.parentNode.removeChild(listItem)
     }
+
 </script>
 {{template "headerComponent" .MetaData}}
 <div class="ui container">
     <div class="ui fluid action input">
-        <input type="text" placeholder="Search...">
-        <div class="ui button">Search</div>
+        <input
+                type="text"
+                placeholder="ADD TO BUCKET..."
+        >
+        <div class="ui button">ADD</div>
     </div>
 <div class="ui inverted segment">
     <div class="ui inverted relaxed divided list">
