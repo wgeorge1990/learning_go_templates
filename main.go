@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+//  Test data that will eventually be handled by backend
 var todos  = []string{
 	"Go sky diving",
 	"Dont worry be happy",
